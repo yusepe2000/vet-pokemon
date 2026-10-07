@@ -1,9 +1,13 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "vet-pokemon",
 =======
   "name": "veterinaria-huellitas-v2",
 >>>>>>> 606f366e4a211d73b140ed3ba2cbde601cdf2706
+=======
+  "name": "veterinaria-huellitas-v2",
+>>>>>>> 74d4cd3 (Primer commit: subiendo carpeta con mas de 100 archivos)
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -18,11 +22,14 @@
     "react": "^19.2.8",
     "react-bootstrap": "^2.10.10",
 <<<<<<< HEAD
+<<<<<<< HEAD
     "react-dom": "^19.2.8",
     "react-hook-form": "^7.89.0"
   },
   "devDependencies": {
 =======
+=======
+>>>>>>> 74d4cd3 (Primer commit: subiendo carpeta con mas de 100 archivos)
     "react-dom": "^19.3.0",
     "react-router-dom": "^7.18.4"
   },
@@ -30,22 +37,33 @@
     "@babel/core": "^8.0.7",
     "@babel/preset-env": "^8.0.7",
     "@babel/preset-react": "^8.0.1",
+<<<<<<< HEAD
 >>>>>>> 606f366e4a211d73b140ed3ba2cbde601cdf2706
+=======
+>>>>>>> 74d4cd3 (Primer commit: subiendo carpeta con mas de 100 archivos)
     "@eslint/js": "^10.0.1",
     "@types/react": "^19.2.18",
     "@types/react-dom": "^19.2.7",
     "@vitejs/plugin-react": "^6.1.1",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "babel-loader": "^10.1.1",
     "css-loader": "^7.1.5",
 >>>>>>> 606f366e4a211d73b140ed3ba2cbde601cdf2706
+=======
+    "babel-loader": "^10.1.1",
+    "css-loader": "^7.1.5",
+>>>>>>> 74d4cd3 (Primer commit: subiendo carpeta con mas de 100 archivos)
     "eslint": "^10.10.0",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.6",
     "globals": "^17.12.0",
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 74d4cd3 (Primer commit: subiendo carpeta con mas de 100 archivos)
     "jasmine-core": "^7.0.2",
     "karma": "^6.4.4",
     "karma-babel-preprocessor": "^8.0.2",
@@ -55,7 +73,10 @@
     "karma-jasmine-html-reporter": "^2.3.0",
     "karma-webpack": "^5.0.1",
     "style-loader": "^4.0.0",
+<<<<<<< HEAD
 >>>>>>> 606f366e4a211d73b140ed3ba2cbde601cdf2706
+=======
+>>>>>>> 74d4cd3 (Primer commit: subiendo carpeta con mas de 100 archivos)
     "vite": "^8.3.0"
   }
 }
