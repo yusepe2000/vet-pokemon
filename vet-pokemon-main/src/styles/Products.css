@@ -1,0 +1,117 @@
+#Productos {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.palabra {
+    border: 2px solid #e78484;    
+    background-color: #f4f8fb;        
+    border-radius: 16px;            
+    padding: 20px;                    
+    margin: 20px 0;                  
+    display: flex;
+    flex-direction: column;         
+    gap: 15px;
+    width: 100%; 
+    box-sizing: border-box;
+}
+
+.palabra h2 {
+    text-align: center; 
+}
+
+.productos-k {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;              
+    width: 100%;
+}
+
+
+.pokeballs-p, .superball-p, .ultraball-p, .masterball-p,
+.caramelos-xs, .caramelos-s, .caramelos-m, .caramelos-l,
+.piedra-trueno, .piedra-solar, .piedra-lunar, .piedra-hoja, 
+.piedra-agua, .piedra-fuego {
+    width: 220px;                  
+    max-width: 100%;              
+    border: 2px solid #979494;   
+    border-radius: 12px;        
+    padding: 15px;            
+    text-align: center;         
+    background-color: #9ebefad4;  
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.productos-k img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.nombre-producto { 
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #0b0a0a;            
+}
+
+.Agregar {
+  background-color: lightgreen;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Eliminar {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.carrito {
+  position: fixed;
+  top: 120px;
+  right: 10px;
+  background-color: #B84A42;
+  color: #ffffff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+@media (max-width: 600px) {
+  #Productos {
+    padding: 10px;
+  }
+
+  .palabra {
+    width: 100%;
+  }
+
+  .productos-k {
+    justify-content: center;
+  }
+}
