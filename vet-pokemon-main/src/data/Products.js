@@ -23,7 +23,7 @@ const products = [
   {
     id: 4,
     name: 'Masterball',
-    price: 5000,
+    price: 1000000000,
     category: 'Pokeballs',
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/a/a9/latest/20120802225204/Master_Ball_%28Ilustraci%C3%B3n%29.png'
   },

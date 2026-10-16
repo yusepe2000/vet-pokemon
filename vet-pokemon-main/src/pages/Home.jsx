@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Image from '../components/atoms/Image';
 import Text from '../components/atoms/Text';
 import Button from '../components/atoms/Button';
-
+import muchosPokes from '../data/image/MuchosPokes.webp';
 
 function Home() {
   const navigate = useNavigate();
@@ -21,11 +21,11 @@ function Home() {
       <div className="seccion-index">
         <article id="Nosotros">
           <div className="nosotros-imagen">
-            <Image 
-              src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" 
-              alt="Pokémones" 
-              className="imgPoke" 
-            />
+            <Image
+            src={muchosPokes}
+            alt="Pokémones"
+            className="imgPoke"
+          />
           </div>
           <div className="nosotros-texto">
             <Text variant="h2">
@@ -36,7 +36,7 @@ function Home() {
               En Huellitas cuidamos a cada Pokémon con amor, dedicación y profesionalismo.
               Nuestro objetivo es mantenerlos sanos, felices y listos para vivir nuevas aventuras junto a sus entrenadores.
             </Text>
-            <Button onClick={() => navigate('/products')}>
+            <Button onClick={() => navigate('/nosotros')}>
               Ver más
             </Button>
           </div>

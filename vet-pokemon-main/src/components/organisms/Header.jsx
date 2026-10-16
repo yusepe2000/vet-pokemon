@@ -1,29 +1,42 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
-import logoPoke from '../image/logoPoke.webp';
+import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
+import logoPoke from '../../data/image/logoPoke.webp';
 
-export const Header = () => {
+const links = [
+  { ruta: '/', texto: 'Inicio' },
+  { ruta: '/nosotros', texto: 'Nosotros' },
+  { ruta: '/products', texto: 'Productos' },
+];
+
+function Header() {
   return (
-    <header id="header">
-      <div className="marca">
-        <img src={logoPoke} alt="Logo Veterinaria Huellitas" className="logo" />
-        <h1>Veterinaria Huellitas</h1>
-      </div>
+  <BootstrapNavbar  expand="lg"  variant="dark" className="navbar-huellitas"  style={{ backgroundColor: '#DC0A0A' }}>
+      <Container>
+        <BootstrapNavbar.Brand as={Link} to="/" className="marca">
+          <img src={logoPoke} alt="Logo Veterinaria Huellitas" className="logo" />
+          Veterinaria Huellitas
+        </BootstrapNavbar.Brand>
 
-      <nav>
-        <Link to="/">Inicio</Link>
-        <a href="/#Nosotros">Nosotros</a>
-        <Link to="/products">Productos</Link>
-        <a href="/#Servicios">Servicios</a>
-        <a href="/#contacto">Contacto</a>
-      </nav>
+        <BootstrapNavbar.Toggle aria-controls="menu-principal" />
+        <BootstrapNavbar.Collapse id="menu-principal">
+          <Nav className="me-auto">
+            {links.map((link) => (
+              <Nav.Link key={link.ruta} as={Link} to={link.ruta}>
+                {link.texto}
+              </Nav.Link>
+            ))}
+            <Nav.Link href="/#Servicios">Servicios</Nav.Link>
+            <Nav.Link href="/#contacto">Contacto</Nav.Link>
+          </Nav>
 
-      <section>
-        <a href="#register">Regístrate</a>
-        <a href="#login">Iniciar Sesión</a>
-      </section>
-    </header>
+          <Nav>
+            <Nav.Link href="#register">Regístrate</Nav.Link>
+            <Nav.Link href="#login">Iniciar Sesión</Nav.Link>
+          </Nav>
+        </BootstrapNavbar.Collapse>
+      </Container>
+    </BootstrapNavbar>
   );
-};
+}
 
 export default Header;

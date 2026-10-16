@@ -1,26 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Smooch+Sans:wght@100..900&display=swap');
-/* style.css*/
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+/* style.css */
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.no-select {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-h1{
+h1 {
     margin: 0;
     padding: 0;
     font-family: "Bricolage Grotesque", sans-serif;
@@ -28,7 +21,7 @@ h1{
     line-height: clamp(1.75rem, 1.471rem + 1.176vw, 2.5rem);
 }
 
-h2{
+h2 {
     margin: 0;
     padding: 0;
     font-family: "Bricolage Grotesque", sans-serif;
@@ -36,34 +29,37 @@ h2{
     line-height: clamp(1.25rem, 0.971rem + 1.176vw, 2rem);
 }
 
-p{
+p {
     margin: 0;
     padding: 0;
     text-align: center;
     font-family: "Roboto Condensed", sans-serif;
 }
 
-header{
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    flex-wrap: wrap;
-    border-bottom: 0.5px solid #dfdfdf;
-    background-color: #B84A42;
-    padding: 20px 0 40px 0;
-    gap: 12px;
-    color: #ffffff;
-}
-header a {
-    color: #ffffff;
-    text-decoration: none;
+.navbar-huellitas {
+    background-color: #DC0A0A;
+    --bs-navbar-color: rgba(255, 255, 255, 0.85);
+    --bs-navbar-hover-color: #ffffff;
+    --bs-navbar-active-color: #ffffff;
 }
 
-header section:last-child{
-    margin-left: auto;
+.navbar-huellitas .marca {
     display: flex;
     align-items: center;
     gap: 12px;
+    font-family: "Bricolage Grotesque", sans-serif;
+    font-size: 1.5rem;
+}
+
+
+.navbar-huellitas .nav-link:focus:not(:hover):not(.active) {
+    color: var(--bs-navbar-color);
+}
+
+
+.navbar-huellitas .nav-link.active {
+    font-weight: bold;
+    border-bottom: 2px solid #ffffff;
 }
 
 .logo {
@@ -71,45 +67,22 @@ header section:last-child{
     width: auto;
 }
 
-footer{
+/* ---------- Footer ---------- */
+footer {
     background-color: #000;
     color: #fff;
     text-align: center;
     padding: 20px 0;
 }
 
-#inicio{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-#inicio p{
-    width: clamp(18.75rem, 7.108rem + 49.02vw, 50rem);
-    text-align: justify;
-}
-
-#inicio img {
-    width: clamp(18.75rem, 7.108rem + 49.02vw, 50rem);
-    border-radius: 8px;
-}
-
-#info{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px
-}
-
-
+/* ---------- Contacto ---------- */
 #contacto div:first-child {
     display: flex;
-    flex-direction: row;      
-    flex-wrap: wrap;         
-    justify-content: center; 
-    align-items: center;     
-    gap: 10px; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     text-align: center;
 }
 
@@ -126,29 +99,11 @@ footer{
     color: #000;
 }
 
-
 .img-contacto {
     width: 30px;
     height: 25px;
     object-fit: contain;
     vertical-align: middle;
-}
-.caluga{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.boton {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #256b45;
-    text-decoration: none;
-    border-radius: 6px;
-    color: #ffffff;
 }
 
 
@@ -208,7 +163,7 @@ footer{
 
 .btn {
     display: inline-block;
-    background-color: #C85048; /* rojo claro */
+    background-color: #C85048;
     color: white;
     text-decoration: none;
     padding: 12px 28px;
@@ -231,6 +186,7 @@ footer{
     }
 }
 
+/* ---------- Pagina Nosotros (AboutUs) ---------- */
 .seccion-nosotros {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -255,7 +211,7 @@ footer{
     margin: 0;
 }
 
-.img-nosotros{
+.img-nosotros {
     width: 100%;
     height: 450px;
     object-fit: cover;
@@ -267,7 +223,6 @@ footer{
         grid-template-columns: 1fr;
     }
 }
-
 
 .seccion-blog {
     display: flex;
@@ -341,7 +296,7 @@ footer{
     }
 }
 
-
+/* ---------- Servicios ---------- */
 .seccion-servicios {
     background-color: #A8B8C8;
     padding: 60px 40px;
