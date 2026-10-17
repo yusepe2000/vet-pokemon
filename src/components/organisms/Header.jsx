@@ -6,6 +6,7 @@ const links = [
   { ruta: '/', texto: 'Inicio' },
   { ruta: '/nosotros', texto: 'Nosotros' },
   { ruta: '/products', texto: 'Productos' },
+  { ruta: '/blog', texto: 'Blog' }
 ];
 
 function Header() {

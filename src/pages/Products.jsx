@@ -11,7 +11,7 @@ function Products() {
   const [carrito, setCarrito] = useState([]);
   const [abierto, setAbierto] = useState(false);
 
-  // suma de los precios de todo lo que hay en el carrito
+  
   let total = 0;
   for (let i = 0; i < carrito.length; i++) {
     total = total + carrito[i].price;
@@ -21,19 +21,16 @@ function Products() {
     setCarrito([...carrito, producto]);
   };
 
-  // quita un producto del carrito segun su posicion
   const quitar = (indice) => {
     setCarrito(carrito.filter((producto, i) => i !== indice));
   };
 
-  // busca el primer producto con ese id y lo quita
   const eliminar = (id) => {
     const indice = carrito.findIndex((producto) => producto.id === id);
     if (indice !== -1) {
       quitar(indice);
     }
   };
-
   return (
     <>
       <div className="carrito-barra">
