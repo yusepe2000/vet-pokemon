@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import products from '../data/Products';
+import { obtenerProductos } from '../data/inventario';
 import ProductCard from '../components/molecules/ProductCard';
 import CarritoPanel from '../components/organisms/Carritopanel';
 import Button from '../components/atoms/Button';
@@ -8,6 +8,7 @@ import '../styles/Products.css';
 const categorias = ['Pokeballs', 'Caramelos', 'Piedras Evolutivas'];
 
 function Products() {
+  const products = obtenerProductos();
   const [carrito, setCarrito] = useState([]);
   const [abierto, setAbierto] = useState(false);
 
