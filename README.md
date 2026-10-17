@@ -1,4 +1,4 @@
-integrantes:Rayen Beltran,Matias Oviedo Thomas M
+integrantes:Rayen Beltran,Matias Oviedo Thomas Mery
 
 # React + Vite
 
