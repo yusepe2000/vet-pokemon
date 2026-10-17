@@ -1,11 +1,14 @@
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/organisms/Header';
-import { Footer } from './components/organisms/Footer';
+import Blog from './pages/Blog'
+import Footer from './components/organisms/Footer';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import AboutUs from './pages/AboutUs';
-import Blog from './pages/Blog'
-
+import Login from './pages/Login';
+import Registro from './pages/Registro';
+import Admin from './pages/Admin';
+import AdminLock from './components/templates/AdminLock';
 
 
 function App() {
@@ -13,15 +16,18 @@ function App() {
     <>
       <Header />
         <Routes>
-        <Route path="/" element={<Home/>}/>
-        <Route path="/nosotros" element={<AboutUs/>}/>
-        <Route path="/products" element={< Products />}/>
-        <Route path="/blog" element={<Blog />}/>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/nosotros" element={<AboutUs/>}/>
+          <Route path="/products" element={< Products />}/>
+          <Route path="/blog" element={<Blog />}/>
+          <Route path="/login" element={<Login />} />
+         <Route path="/blog" element={<Blog />}/>
+          <Route path="/registro" element={<Registro />} />
+          <Route path="/admin" element={<AdminLock> <Admin /> </AdminLock>} />
         </Routes>
       <Footer />
 
     </>
-  )
-
+  );
 }
 export default App;

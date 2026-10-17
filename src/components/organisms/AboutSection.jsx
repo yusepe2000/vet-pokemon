@@ -1,12 +1,12 @@
 import React from 'react';
-import muchosPokes from '../image/muchosPokes.webp'; 
+import MuchosPokes from '../../data/image/MuchosPokes.webp'; 
 
 export const AboutSection = () => {
   return (
     <div className="seccion-index">
       <article id="Nosotros">
         <div className="nosotros-imagen">
-          <img src={muchosPokes} alt="pokemones" className="imgPoke" />
+          <img src={MuchosPokes} alt="pokemones" className="imgPoke" />
         </div>
         <div className="nosotros-texto">
           <h2>
@@ -23,3 +23,5 @@ export const AboutSection = () => {
     </div>
   );
 };
+
+export default AboutSection;

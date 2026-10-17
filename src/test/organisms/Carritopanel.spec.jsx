@@ -1,13 +1,13 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import CarritoPanel from '../../components/organisms/CarritoPanel.jsx';
+import CarritoPanel from '../../components/organisms/Carritopanel.jsx';
  
 const p1 = { id: 1, name: 'Pokeball', price: 200, image: 'https://ejemplo.com/a.png' };
 const p2 = { id: 2, name: 'Superball', price: 600, image: 'https://ejemplo.com/b.png' };
  
 afterEach(cleanup);
  
-describe('CarritoPanel', () => {
+describe('Carritopanel', () => {
   it('muestra el mensaje de carrito vacío y el total en 0', () => {
     render(<CarritoPanel carrito={[]} total={0} onQuitar={() => {}} />);
     expect(screen.getByText('El carrito está vacío')).toBeTruthy();
