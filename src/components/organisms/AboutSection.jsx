@@ -1,5 +1,6 @@
 import React from 'react';
 import MuchosPokes from '../../data/image/MuchosPokes.webp'; 
+import '../../styles/organismsStyle/Aboutsection.css';
 
 export const AboutSection = () => {
   return (

@@ -1,0 +1,38 @@
+.seccion-servicios {
+    background-color: #A8B8C8;
+    padding: var(--espacio-seccion);
+    text-align: center;
+    width: 100%;
+}
+ 
+.servicios-titulo {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 40px auto;
+    color: var(--color-texto);
+    font-size: var(--titulo-seccion);
+}
+ 
+.servicios-titulo .destacado {
+    color: var(--color-primario);
+}
+ 
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: var(--ancho-contenido);
+    margin: 0 auto;
+}
+ 
+@media (max-width: 900px) {
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+@media (max-width: 500px) {
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+}

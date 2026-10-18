@@ -1,5 +1,6 @@
 import CarritoItem from '../molecules/Carritoitem';
 import Text from '../atoms/Text';
+import '../../styles/organismsStyle/Carritopanel.css';
  
 function CarritoPanel({ carrito, total, onQuitar }) {
   return (

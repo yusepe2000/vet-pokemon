@@ -1,6 +1,7 @@
 import Image from '../atoms/Image';
 import Text from '../atoms/Text';
 import Button from '../atoms/Button';
+import '../../styles/moleculesStyle/productCard.css';
  
 function ProductCard({ product, onAgregar, onEliminar }) {
   return (

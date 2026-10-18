@@ -1,5 +1,6 @@
 import posts from '../../data/Blog';
 import BlogCard from '../molecules/BlogCard';
+import '../../styles/organismsStyle/Blogsection.css';
  
 function BlogSection() {
   return (
@@ -7,7 +8,7 @@ function BlogSection() {
       <h2>Noticias desde el Centro Pokémon</h2>
       <div className="blog-grid">
         {posts.map((post) => (
-          
+
           <BlogCard key={post.id} post={post} />
         ))}
       </div>

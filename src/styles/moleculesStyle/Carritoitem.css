@@ -1,0 +1,18 @@
+.carrito-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    border-bottom: 1px solid #cccccc;
+}
+ 
+.carrito-item img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+ 
+.carrito-item p {
+    flex: 1;
+    text-align: left;
+}

@@ -4,7 +4,7 @@ import { obtenerProductos } from '../data/inventario';
 import ProductCard from '../components/molecules/ProductCard';
 import CarritoPanel from '../components/organisms/Carritopanel';
 import Button from '../components/atoms/Button';
-import '../styles/Products.css';
+import '../styles/pagesStyle/productsStyle.css';
 
 const categorias = ['Pokeballs', 'Caramelos', 'Piedras Evolutivas'];
 
@@ -13,7 +13,6 @@ function Products() {
   const [carrito, setCarrito] = useState([]);
   const [abierto, setAbierto] = useState(false);
 
-  // suma de los precios de todo lo que hay en el carrito
   let total = 0;
   for (let i = 0; i < carrito.length; i++) {
     total = total + carrito[i].price;
