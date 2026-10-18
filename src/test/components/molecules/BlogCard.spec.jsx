@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import BlogCard from '../../components/molecules/BlogCard.jsx';
+import BlogCard from '../../../components/molecules/BlogCard.jsx';
  
 const post = {
   id: 1,

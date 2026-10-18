@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import Button from '../../components/atoms/Button.jsx';
+import Button from '../../../components/atoms/Button.jsx';
 
 afterEach(cleanup);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, cleanup } from '@testing-library/react';
-import Navbar from '../../components/organisms/Navbar.jsx';
+import Navbar from '../../../components/organisms/Navbar.jsx';
  
 afterEach(cleanup);
  
