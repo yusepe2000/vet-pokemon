@@ -29,7 +29,7 @@ function Header() {
   };
 
   return (
-  <BootstrapNavbar  expand="lg"  variant="dark" className="navbar-huellitas"  style={{ backgroundColor: '#DC0A0A' }}>
+  <BootstrapNavbar  expand="lg" sticky="top" variant="dark" className="navbar-huellitas"  style={{ backgroundColor: '#DC0A0A' }}>
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/" className="marca">
           <img src={logoPoke} alt="Logo Veterinaria Huellitas" className="logo" />
