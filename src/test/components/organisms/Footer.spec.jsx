@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import Footer from '../../components/organisms/Footer.jsx';
+import Footer from '../../../components/organisms/Footer.jsx';
 
 afterEach(cleanup);
 

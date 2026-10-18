@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
-import Header from '../../components/organisms/Header.jsx';
+import Header from '../../../components/organisms/Header.jsx';
 
 afterEach(cleanup);
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import ProductCard from '../../components/molecules/ProductCard.jsx';
+import ProductCard from '../../../components/molecules/ProductCard.jsx';
 
 const producto = {
   id: 1,

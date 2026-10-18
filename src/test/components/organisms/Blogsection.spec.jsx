@@ -1,7 +1,7 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import BlogSection from '../../components/organisms/BlogSection.jsx';
-import posts from '../../data/Blog.js';
+import BlogSection from '../../../components/organisms/BlogSection.jsx';
+import posts from '../../../data/Blog.js';
 
 afterEach(cleanup);
 

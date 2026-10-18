@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import AboutUsSection from '../../components/organisms/AboutUsSection.jsx';
+import AboutUsSection from '../../../components/organisms/AboutUsSection.jsx';
 
 afterEach(cleanup);
 

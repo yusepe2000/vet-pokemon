@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import CarritoItem from '../../components/molecules/Carritoitem.jsx';
+import CarritoItem from '../../../components/molecules/Carritoitem.jsx';
 
 const producto = {
   id: 1,

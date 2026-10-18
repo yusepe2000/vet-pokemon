@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import AboutUsText from '../../components/molecules/AboutUsText.jsx';
+import AboutUsText from '../../../components/molecules/AboutUsText.jsx';
  
 afterEach(cleanup);
  
