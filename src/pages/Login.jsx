@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import '../styles/pagesStyle/Form.css';
 
 import FormField from '../components/molecules/FormField';
 import Input from '../components/atoms/Input';

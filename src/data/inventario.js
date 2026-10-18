@@ -1,7 +1,5 @@
 import productosIniciales from './Products.js';
 
-// Los productos se guardan en localStorage para que el administrador
-// pueda agregar, editar y eliminar sin tocar el código (temporal).
 const CLAVE_PRODUCTOS = 'productosHuellitas';
 
 export const CATEGORIAS = ['Pokeballs', 'Caramelos', 'Piedras Evolutivas'];
@@ -11,7 +9,7 @@ export function obtenerProductos() {
     const guardados = JSON.parse(localStorage.getItem(CLAVE_PRODUCTOS));
     if (Array.isArray(guardados)) return guardados;
   } catch {
-    // si el dato está corrupto se usan los productos iniciales
+   
   }
   return productosIniciales;
 }

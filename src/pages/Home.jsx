@@ -4,6 +4,10 @@ import Image from '../components/atoms/Image';
 import Text from '../components/atoms/Text';
 import Button from '../components/atoms/Button';
 import muchosPokes from '../data/image/MuchosPokes.webp';
+import '../styles/organismsStyle/Aboutsection.css';
+import '../styles/moleculesStyle/Serviciocard.css';
+import '../styles/organismsStyle/servicios.css';
+import '../styles/organismsStyle/Contacto.css';
 
 function Home() {
   const navigate = useNavigate();
@@ -36,8 +40,8 @@ function Home() {
               En Huellitas cuidamos a cada Pokémon con amor, dedicación y profesionalismo.
               Nuestro objetivo es mantenerlos sanos, felices y listos para vivir nuevas aventuras junto a sus entrenadores.
             </Text>
-            <Button onClick={() => navigate('/nosotros')}>
-              Ver más
+            <Button className="btnverms" onClick={() => navigate('/nosotros')}>
+              Ver mas
             </Button>
           </div>
         </article>

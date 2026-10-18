@@ -1,5 +1,5 @@
 // Autenticación del lado del cliente usando localStorage (sin backend).
-// Es suficiente para el proyecto académico, pero las contraseñas se guardan
+// Es suficiente para el proyecto acadmico, pero las contraseñas se guardan
 // en texto plano en el navegador: NO usar así en producción.
 
 const CLAVE_USUARIOS = 'usuariosHuellitas';
