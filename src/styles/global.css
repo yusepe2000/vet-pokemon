@@ -91,4 +91,9 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+@media (min-width: 900px) {
+  body {
+    min-width: 1550px;
+  }
+}
  

@@ -3,17 +3,29 @@ import Text from '../atoms/Text';
 import '../../styles/organismsStyle/Carritopanel.css';
  
 function CarritoPanel({ carrito, total, onQuitar }) {
+  // junta los productos repetidos: guarda cuántos hay y la posición del primero
+  const grupos = [];
+  carrito.forEach((producto, indice) => {
+    const grupo = grupos.find((g) => g.producto.id === producto.id);
+    if (grupo) {
+      grupo.cantidad = grupo.cantidad + 1;
+    } else {
+      grupos.push({ producto, cantidad: 1, indice });
+    }
+  });
+
   return (
     <div className="carrito-panel">
       <h2>Tu carrito</h2>
  
       {carrito.length === 0 && <Text variant="p">El carrito está vacío</Text>}
  
-      {carrito.map((producto, indice) => (
+      {grupos.map((grupo) => (
         <CarritoItem
-          key={indice}
-          producto={producto}
-          onQuitar={() => onQuitar(indice)}
+          key={grupo.producto.id}
+          producto={grupo.producto}
+          cantidad={grupo.cantidad}
+          onQuitar={() => onQuitar(grupo.indice)}
         />
       ))}
  

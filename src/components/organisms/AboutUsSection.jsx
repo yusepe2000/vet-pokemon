@@ -17,6 +17,7 @@ function AboutUsSection() {
       </AboutUsText>
       <img src={enfermera} alt="veterinaria" className="img-nosotros" />
     </div>
+    
   );
 }
 

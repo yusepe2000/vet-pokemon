@@ -3,6 +3,7 @@ import products from '../data/Products';
 import { obtenerProductos } from '../data/inventario';
 import ProductCard from '../components/molecules/ProductCard';
 import CarritoPanel from '../components/organisms/Carritopanel';
+import ProductStock from '../components/organisms/ProductStock';
 import Button from '../components/atoms/Button';
 import '../styles/pagesStyle/productsStyle.css';
 
@@ -12,6 +13,7 @@ function Products() {
   const products = obtenerProductos();
   const [carrito, setCarrito] = useState([]);
   const [abierto, setAbierto] = useState(false);
+  const [seleccionado, setSeleccionado] = useState(null);
 
   let total = 0;
   for (let i = 0; i < carrito.length; i++) {
@@ -32,6 +34,7 @@ function Products() {
       quitar(indice);
     }
   };
+
   return (
     <>
       <div className="carrito-barra">
@@ -59,14 +62,20 @@ function Products() {
                     product={p}
                     onAgregar={() => agregar(p)}
                     onEliminar={() => eliminar(p.id)}
+                    onVerDetalle={() => setSeleccionado(p)}
                   />
                 ))}
             </div>
           </div>
         ))}
       </section>
+
+      <ProductStock
+        producto={seleccionado}
+        onCerrar={() => setSeleccionado(null)}
+        onAgregar={() => agregar(seleccionado)}
+      />
     </>
   );
 }
-
 export default Products;

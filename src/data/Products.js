@@ -4,6 +4,8 @@ const products = [
     name: 'Pokeball',
     price: 200,
     category: 'Pokeballs',
+    descripcion: 'Captura mejor que la pokeball.',
+    stock: 30,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/0/02/latest/20231226202856/Pok%C3%A9_Ball_%28Ilustraci%C3%B3n%29.png/225px-Pok%C3%A9_Ball_%28Ilustraci%C3%B3n%29.png'
   },
   {
@@ -11,6 +13,8 @@ const products = [
     name: 'Superball',
     price: 600,
     category: 'Pokeballs',
+    descripcion: 'Captura mejor que la pokeball.',
+    stock: 30,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/5/57/latest/20231226203004/Super_Ball_%28Ilustraci%C3%B3n%29.png/225px-Super_Ball_%28Ilustraci%C3%B3n%29.png'
   },
   {
@@ -18,6 +22,8 @@ const products = [
     name: 'Ultraball',
     price: 1200,
     category: 'Pokeballs',
+    descripcion: 'Muy buena para capturar pokemon dificiles.',
+    stock: 15,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/thumb/c/c9/latest/20231226203124/Ultra_Ball_%28Ilustraci%C3%B3n%29.png/225px-Ultra_Ball_%28Ilustraci%C3%B3n%29.png'
   },
   {
@@ -25,6 +31,8 @@ const products = [
     name: 'Masterball',
     price: 1000000000,
     category: 'Pokeballs',
+    descripcion: 'Captura a cualquier pokemon sin fallar.',
+    stock: 1,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/a/a9/latest/20120802225204/Master_Ball_%28Ilustraci%C3%B3n%29.png'
   },
 
@@ -33,6 +41,8 @@ const products = [
     name: 'Caramelo XS',
     price: 100,
     category: 'Caramelos',
+    descripcion: 'Da un poco de experiencia.',
+    stock: 100,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/d/d2/latest/20230102191804/Caramelo_experiencia_XS_EP.png'
   },
   {
@@ -40,6 +50,8 @@ const products = [
     name: 'Caramelo S',
     price: 250,
     category: 'Caramelos',
+    descripcion: 'Da algo mas de experiencia.',
+    stock: 80,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/c/c3/latest/20230102191818/Caramelo_experiencia_S_EP.png'
   },
   {
@@ -47,6 +59,8 @@ const products = [
     name: 'Caramelo M',
     price: 500,
     category: 'Caramelos',
+    descripcion: 'Da bastante experiencia.',
+    stock: 50,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/a/a5/latest/20230102191835/Caramelo_experiencia_M_EP.png'
   },
   {
@@ -54,6 +68,8 @@ const products = [
     name: 'Caramelo L',
     price: 1000,
     category: 'Caramelos',
+    descripcion: 'Da mucha experiencia.',
+    stock: 25,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/5/58/latest/20230102191848/Caramelo_experiencia_L_EP.png'
   },
   // Piedras Evolutivas
@@ -62,6 +78,8 @@ const products = [
     name: 'Piedra Trueno',
     price: 2100,
     category: 'Piedras Evolutivas',
+    descripcion: 'Hace evolucionar a pokemon electricos, como Pikachu.',
+    stock: 8,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/3/30/latest/20230106130335/Piedra_trueno_EP.png'
   },
   {
@@ -69,6 +87,8 @@ const products = [
     name: 'Piedra Solar',
     price: 2100,
     category: 'Piedras Evolutivas',
+    descripcion: 'Hace evolucionar a algunos pokemon, como Gloom.',
+    stock: 6,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/1/13/latest/20230106130543/Piedra_solar_EP.png'
   },
   {
@@ -76,6 +96,8 @@ const products = [
     name: 'Piedra Lunar',
     price: 2100,
     category: 'Piedras Evolutivas',
+    descripcion: 'Hace evolucionar a algunos pokemon, como Clefairy.',
+    stock: 7,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/4/40/latest/20230106130527/Piedra_lunar_EP.png'
   },
   {
@@ -83,6 +105,8 @@ const products = [
     name: 'Piedra Hoja',
     price: 2100,
     category: 'Piedras Evolutivas',
+    descripcion: 'Hace evolucionar a pokemon de planta, como Weepinbell.',
+    stock: 9,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/8/85/latest/20230106130605/Piedra_hoja_EP.png'
   },
   {
@@ -90,6 +114,8 @@ const products = [
     name: 'Piedra Agua',
     price: 2100,
     category: 'Piedras Evolutivas',
+    descripcion: 'Hace evolucionar a pokemon de agua, como Poliwhirl.',
+    stock: 5,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/1/14/latest/20230106130249/Piedra_agua_EP.png'
   },
   {
@@ -97,6 +123,8 @@ const products = [
     name: 'Piedra Fuego',
     price: 2100,
     category: 'Piedras Evolutivas',
+    descripcion: 'Hace evolucionar a pokemon de fuego, como Vulpix.',
+    stock: 4,
     image: 'https://images.wikidexcdn.net/mwuploads/wikidex/8/86/latest/20230106130317/Piedra_fuego_EP.png'
   }
 ];

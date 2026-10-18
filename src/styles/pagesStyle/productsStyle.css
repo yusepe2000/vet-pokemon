@@ -9,7 +9,8 @@
     padding: 20px;
 }
 
-/* caja de cada categoría */
+
+/* caja de cada categoria cambiar nombre para la otra*/
 .palabra {
     display: flex;
     flex-direction: column;
@@ -34,7 +35,7 @@
     width: 100%;
 }
 
-/* botón "Carrito: X productos", fijo arriba a la derecha */
+/* botn carrito  */
 .carrito-barra {
     position: sticky;
     top: 10px;
@@ -72,5 +73,29 @@
 @media (max-width: 600px) {
     #Productos {
         padding: 10px;
+    }
+    
+}
+@media (max-width: 899px) {
+        .carrito-barra {
+        position: sticky;
+        top: 0;
+        height: auto;
+        justify-content: center;
+        padding: 8px 10px;
+        background-color: #ffffff;
+        z-index: 100;
+    }
+
+    .carrito-caja {
+        align-items: center;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 0;
+    }
+
+    .carrito-caja .carrito-panel {
+        max-height: 60vh;
+        overflow-y: auto;
     }
 }
