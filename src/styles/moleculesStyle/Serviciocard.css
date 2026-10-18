@@ -1,0 +1,20 @@
+.servicio-card {
+    background-color: var(--color-fondo);
+    border: 2px solid var(--color-primario);
+    border-radius: var(--radio-card);
+    padding: 40px 20px;
+    color: var(--color-primario);
+    transition: transform 0.2s, background-color 0.2s;
+    cursor: pointer;
+}
+ 
+.servicio-card:hover {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    transform: translateY(-5px);
+}
+ 
+.servicio-card p {
+    font-weight: bold;
+    font-size: 1.1rem;
+}

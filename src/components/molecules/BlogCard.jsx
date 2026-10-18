@@ -1,6 +1,7 @@
 import Image from '../atoms/Image';
 import Text from '../atoms/Text';
- 
+import '../../styles/moleculesStyle/Blogcard.css';
+
 function BlogCard({ post }) {
 
   return (
@@ -13,7 +14,7 @@ function BlogCard({ post }) {
         <Text variant="p" className="blog-meta">{post.fecha} | {post.categoria}</Text>
         
         <Text variant="p" className="blog-texto">{post.texto}</Text>
-        
+
       </div>
     </article>
   );

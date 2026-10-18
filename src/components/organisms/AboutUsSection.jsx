@@ -1,5 +1,6 @@
 import AboutUsText from '../molecules/AboutUsText';
 import enfermera from '../../data/image/enfermera.webp';
+import '../../styles/organismsStyle/AboutUssection.css';
 
 function AboutUsSection() {
   return (
@@ -16,6 +17,7 @@ function AboutUsSection() {
       </AboutUsText>
       <img src={enfermera} alt="veterinaria" className="img-nosotros" />
     </div>
+    
   );
 }
 

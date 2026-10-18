@@ -32,7 +32,7 @@ describe('Home Page', () => {
 
   it('el botón "Ver más" lleva a la página Nosotros', () => {
     mostrarHome();
-    fireEvent.click(screen.getByText('Ver más'));
+    fireEvent.click(screen.getByText('Ver mas'));
     expect(screen.getByText('Página Nosotros')).toBeTruthy();
   });
 });

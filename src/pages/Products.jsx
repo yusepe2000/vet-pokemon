@@ -3,8 +3,9 @@ import products from '../data/Products';
 import { obtenerProductos } from '../data/inventario';
 import ProductCard from '../components/molecules/ProductCard';
 import CarritoPanel from '../components/organisms/Carritopanel';
+import ProductStock from '../components/organisms/ProductStock';
 import Button from '../components/atoms/Button';
-import '../styles/Products.css';
+import '../styles/pagesStyle/productsStyle.css';
 
 const categorias = ['Pokeballs', 'Caramelos', 'Piedras Evolutivas'];
 
@@ -12,8 +13,8 @@ function Products() {
   const products = obtenerProductos();
   const [carrito, setCarrito] = useState([]);
   const [abierto, setAbierto] = useState(false);
+  const [seleccionado, setSeleccionado] = useState(null);
 
-  // suma de los precios de todo lo que hay en el carrito
   let total = 0;
   for (let i = 0; i < carrito.length; i++) {
     total = total + carrito[i].price;
@@ -33,6 +34,7 @@ function Products() {
       quitar(indice);
     }
   };
+
   return (
     <>
       <div className="carrito-barra">
@@ -60,14 +62,20 @@ function Products() {
                     product={p}
                     onAgregar={() => agregar(p)}
                     onEliminar={() => eliminar(p.id)}
+                    onVerDetalle={() => setSeleccionado(p)}
                   />
                 ))}
             </div>
           </div>
         ))}
       </section>
+
+      <ProductStock
+        producto={seleccionado}
+        onCerrar={() => setSeleccionado(null)}
+        onAgregar={() => agregar(seleccionado)}
+      />
     </>
   );
 }
-
 export default Products;

@@ -1,0 +1,26 @@
+.seccion-blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background-color: var(--color-fondo);
+    padding: 50px 40px;
+}
+ 
+.seccion-blog h2 {
+    text-align: center;
+}
+ 
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: var(--ancho-contenido);
+    width: 100%;
+}
+ 
+@media (max-width: 900px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
