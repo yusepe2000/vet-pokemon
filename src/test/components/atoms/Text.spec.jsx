@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import Text from '../../components/atoms/Text.jsx';
+import Text from '../../../components/atoms/Text.jsx';
  
 afterEach(cleanup);
  

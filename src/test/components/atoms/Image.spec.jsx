@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import Image from '../../components/atoms/Image.jsx';
+import Image from '../../../components/atoms/Image.jsx';
  
 afterEach(cleanup);
  

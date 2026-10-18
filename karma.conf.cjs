@@ -1,11 +1,12 @@
-// karma.conf.cjs
+// karma.conf.js
 module.exports = function (config) {
   config.set({
     frameworks: ['jasmine'],
     files: [
-      'src/**/*.spec.jsx',
+      'src/test/*.spec.jsx',
     ],
     preprocessors: {
+      'src/test/*.spec.jsx': ['webpack'],
       'src/**/*.spec.jsx': ['webpack'],
     },
     webpack: {
@@ -18,10 +19,10 @@ module.exports = function (config) {
             use: {
               loader: 'babel-loader',
               options: {
-                presets: [
-                  '@babel/preset-env',
-                  ['@babel/preset-react', { runtime: 'automatic' }],
-                ],
+                  presets: [
+                    '@babel/preset-env',
+                    ['@babel/preset-react', { runtime: 'automatic' }],
+                  ],
               },
             },
           },
@@ -54,5 +55,5 @@ module.exports = function (config) {
       'karma-coverage',
       'karma-jasmine-html-reporter',
     ],
-  });
+ });
 };
