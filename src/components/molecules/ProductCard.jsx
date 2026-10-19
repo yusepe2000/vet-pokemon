@@ -22,7 +22,9 @@ function ProductCard({ product, onAgregar, onEliminar, onVerDetalle }) {
       <Text variant="p" className="precio-producto">${product.price}</Text>
       <div className="botones-producto">
         <Button className="Eliminar" onClick={eliminar}>Eliminar</Button>
-        <Button className="Agregar" onClick={agregar}>Agregar al carrito</Button>
+        <Button className="Agregar" onClick={agregar} disabled={agotado}>
+          {agotado ? 'Sin stock' : 'Agregar al carrito'}
+        </Button>
       </div>
     </div>
   );

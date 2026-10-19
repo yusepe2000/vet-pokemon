@@ -15,13 +15,33 @@ function Products() {
   const [carrito, setCarrito] = useState([]);
   const [abierto, setAbierto] = useState(false);
   const [seleccionado, setSeleccionado] = useState(null);
+  const [aviso, setAviso] = useState('');
 
   let total = 0;
   for (let i = 0; i < carrito.length; i++) {
     total = total + carrito[i].price;
   }
 
+  const cantidadEnCarrito = (id) => {
+    let cantidad = 0;
+    for (let i = 0; i < carrito.length; i++) {
+      if (carrito[i].id === id) {
+        cantidad++;
+      }
+      return cantidad;
+    }
+  };
+
+  const hayStock = (producto) => {
+    return cantidadEnCarrito(producto.id) < producto.stock;
+  }
+
   const agregar = (producto) => {
+    if (!hayStock(producto)) {
+      setAviso(`No hay suficiente stock de ${producto.name}.`);
+      return;
+    }
+    setAviso('');
     setCarrito([...carrito, producto]);
   };
 
@@ -49,6 +69,12 @@ function Products() {
           )}
         </div>
       </div>
+
+      {aviso && (
+        <Text className="aviso-stock" role="alert">
+          {aviso}
+        </Text>
+      )}
 
       <section id="Productos">
         {categorias.map((categoria) => (

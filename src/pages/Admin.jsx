@@ -14,6 +14,7 @@ function Admin() {
   const [idEdicion, setIdEdicion] = useState(null); // null = estamos creando uno nuevo
   const [nombre, setNombre] = useState('');
   const [precio, setPrecio] = useState('');
+  const [stock, setStock] = useState('');
   const [categoria, setCategoria] = useState(CATEGORIAS[0]);
   const [imagen, setImagen] = useState('');
   const [mensaje, setMensaje] = useState('');
@@ -22,6 +23,7 @@ function Admin() {
     setIdEdicion(null);
     setNombre('');
     setPrecio('');
+    setStock('');
     setCategoria(CATEGORIAS[0]);
     setImagen('');
   };
@@ -31,6 +33,7 @@ function Admin() {
     setIdEdicion(producto.id);
     setNombre(producto.name);
     setPrecio(String(producto.price));
+    setStock(producto.stock === undefined ? '0' : String(producto.stock));
     setCategoria(producto.category);
     setImagen(producto.image);
     setMensaje('');
@@ -52,6 +55,11 @@ function Admin() {
     }
     if (Number(precio) <= 0) {
       setMensaje('El precio debe ser un número mayor a 0.');
+      return;
+    }
+    // el stock es obligatorio y debe ser un número entero de 0 o más
+    if (stock === '' || Number(stock) < 0 || !Number.isInteger(Number(stock))) {
+      setMensaje('El stock debe ser un número entero de 0 o más.');
       return;
     }
 
