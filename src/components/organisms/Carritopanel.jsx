@@ -16,7 +16,7 @@ function CarritoPanel({ carrito, total, onQuitar }) {
 
   return (
     <div className="carrito-panel">
-      <h2>Tu carrito</h2>
+      <Text variant="h2">Tu carrito</Text>
  
       {carrito.length === 0 && <Text variant="p">El carrito está vacío</Text>}
  

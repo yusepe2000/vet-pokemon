@@ -35,7 +35,7 @@ export function Login() {
   return (
     <div id="titulo" className="py-5">
       <div id="datos" className="p-4">
-        <h1 className="h3 text-white mb-3">Iniciar sesión</h1>
+        <Text variant='h1' className="h3 text-white mb-3">Iniciar sesión</Text>
 
         <form id="formulario" onSubmit={handleSubmit(onSubmit)} noValidate>
           {errorLogin && (
@@ -73,9 +73,12 @@ export function Login() {
             Entrar
           </Button>
         </form>
-        <p className="small text-white text-center mt-2 mb-0">
+        <Text className="small text-white text-center mt-2 mb-0">
+          Recuerda que tu correo debe ser @duoc.cl, @profesor.duoc.cl, @duocuc.cl o @gmail.com.
+        </Text>
+        <Text className="small text-white text-center mt-2 mb-0">
           ¿No tienes cuenta? <Link to="/registro">Regístrate aquí</Link>
-        </p>
+        </Text>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Button from '../components/atoms/Button';
 import Input from '../components/atoms/Input';
+import Text from '../components/atoms/Text';
 import FormField from '../components/molecules/FormField';
 import { obtenerUsuarios } from '../data/auth';
 import { obtenerProductos, guardarProductos, restaurarProductos, imagenPorDefecto, CATEGORIAS } from '../data/inventario';
@@ -96,7 +97,7 @@ function Admin() {
 
   return (
     <div className="container py-4">
-      <h1 className="h3 mb-4">Panel de administración</h1>
+      <Text variant='h1' className="h3 mb-4">Panel de administración</Text>
 
       {mensaje && (
         <div className="alert alert-info py-2" role="status">
@@ -105,7 +106,7 @@ function Admin() {
       )}
 
       <section className="mb-5">
-        <h2 className="h4">{idEdicion !== null ? 'Editar producto' : 'Agregar producto'}</h2>
+        <Text variant='h2' className="h4">{idEdicion !== null ? 'Editar producto' : 'Agregar producto'}</Text>
 
         <form onSubmit={guardar} className="row g-3 align-items-end" noValidate>
           <div className="col-md-3">
@@ -158,7 +159,7 @@ function Admin() {
 
       <section className="mb-5">
         <div className="d-flex justify-content-between align-items-center mb-2">
-          <h2 className="h4 mb-0">Productos ({productos.length})</h2>
+          <Text variant='h2' className="h4 mb-0">Productos ({productos.length})</Text>
           <Button className="btn btn-outline-secondary btn-sm" onClick={restaurar}>
             Restaurar productos originales
           </Button>
@@ -198,7 +199,7 @@ function Admin() {
       </section>
 
       <section>
-        <h2 className="h4">Usuarios ({usuarios.length})</h2>
+        <Text variant='h2' className="h4">Usuarios ({usuarios.length})</Text>
         <div className="table-responsive">
           <table className="table table-striped">
             <thead>

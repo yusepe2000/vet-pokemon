@@ -1,10 +1,11 @@
 import React from 'react';
+import Text from '../atoms/Text';
 
 export const Footer = () => {
   return (
     <footer>
-      <p>Veterinaria Huellitas - Cuidando pokemones desde 1996</p>
-      <p>© 2026 Veterinaria Huellitas. Todos los derechos reservados.</p>
+      <Text>Veterinaria Huellitas - Cuidando pokemones desde 1996</Text>
+      <Text>© 2026 Veterinaria Huellitas. Todos los derechos reservados.</Text>
     </footer>
   );
 };

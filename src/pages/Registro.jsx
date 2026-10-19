@@ -6,6 +6,7 @@ import '../styles/pagesStyle/Form.css';
 import FormField from '../components/molecules/FormField';
 import Input from '../components/atoms/Input';
 import Button from '../components/atoms/Button';
+import Text from '../components/atoms/Text';
 import { registrarUsuario, esMayorDeEdad, PATRON_CORREO } from '../data/auth';
 
 const MSG_CORREO = 'Correo inválido. Usa un correo @duoc.cl, @profesor.duoc.cl, @duocuc.cl o @gmail.com.';
@@ -55,7 +56,7 @@ export function Registro() {
   return (
     <div id="titulo" className="py-5">
       <div id="datos" className="p-4">
-        <h1 className="h3 text-white mb-3">Registrar usuario</h1>
+        <Text variant='h1' className="h3 text-white mb-3">Registrar usuario</Text>
 
         <form id="formulario" onSubmit={handleSubmit(onSubmit)} noValidate>
           {errorGeneral && (
@@ -132,9 +133,9 @@ export function Registro() {
           </Button>
         </form>
 
-        <p className="small text-white text-center mt-3 mb-0">
+        <Text className="small text-white text-center mt-3 mb-0">
           ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>
-        </p>
+        </Text>
       </div>
     </div>
   );

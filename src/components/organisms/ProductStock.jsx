@@ -1,5 +1,7 @@
 import Button from '../atoms/Button';
 import '../../styles/organismsStyle/ProductStock.css';
+import Text from '../atoms/Text';
+import Image from '../atoms/Image';
 
 function ProductStock({ producto, onCerrar, onAgregar }) {
   // si no hay producto elegido, no se muestra nada
@@ -13,19 +15,19 @@ function ProductStock({ producto, onCerrar, onAgregar }) {
   return (
     <div className="ventanilla-fondo" onClick={onCerrar}>
       <div className="ventanilla-caja" onClick={(e) => e.stopPropagation()}>
-        <button className="ventanilla-x" onClick={onCerrar} aria-label="Cerrar">
+        <Button className="ventanilla-x" onClick={onCerrar} aria-label="Cerrar">
           ×
-        </button>
+        </Button>
 
-        <img src={producto.image} alt={producto.name} className="ventanilla-img" />
-        <h2 className="ventanilla-nombre">{producto.name}</h2>
-        <p className="ventanilla-descripcion">
+        <Imagen src={producto.image} alt={producto.name} className="ventanilla-img" />
+        <Text variant='h2' className="ventanilla-nombre">{producto.name}</Text>
+        <Text className="ventanilla-descripcion">
           {producto.descripcion || 'Sin descripción'}
-        </p>
+        </Text>
 
         <div className="ventanilla-datos">
-          <p>Precio: ${producto.price}</p>
-          <p className="ventanilla-stock">Stock: {producto.stock}</p>
+          <Text variant='p'>Precio: ${producto.price}</Text>
+          <Text variant='p' className="ventanilla-stock">Stock: {producto.stock}</Text>
         </div>
 
         <Button className="Agregar" onClick={agregarYCerrar}>

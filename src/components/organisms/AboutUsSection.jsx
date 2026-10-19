@@ -1,6 +1,7 @@
 import AboutUsText from '../molecules/AboutUsText';
 import enfermera from '../../data/image/enfermera.webp';
 import '../../styles/organismsStyle/AboutUssection.css';
+import Image from '../atoms/Image';
 
 function AboutUsSection() {
   return (
@@ -15,7 +16,7 @@ function AboutUsSection() {
         Charizard, en Huellitas todos reciben el cuidado que merecen. Porque para
         nosotros, cada huellita cuenta y cada Pokémon es parte de nuestra familia.
       </AboutUsText>
-      <img src={enfermera} alt="veterinaria" className="img-nosotros" />
+      <Image src={enfermera} alt="veterinaria" className="img-nosotros" />
     </div>
     
   );

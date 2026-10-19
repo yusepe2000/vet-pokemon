@@ -6,6 +6,7 @@ import CarritoPanel from '../components/organisms/Carritopanel';
 import ProductStock from '../components/organisms/ProductStock';
 import Button from '../components/atoms/Button';
 import '../styles/pagesStyle/productsStyle.css';
+import Text from '../components/atoms/Text';
 
 const categorias = ['Pokeballs', 'Caramelos', 'Piedras Evolutivas'];
 
@@ -52,7 +53,7 @@ function Products() {
       <section id="Productos">
         {categorias.map((categoria) => (
           <div key={categoria} className="palabra">
-            <h2>{categoria}</h2>
+            <Text variant='h2'>{categoria}</Text>
             <div className="productos-k">
               {products
                 .filter((p) => p.category === categoria)

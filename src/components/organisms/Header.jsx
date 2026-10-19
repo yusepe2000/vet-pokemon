@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
 import logoPoke from '../../data/image/logoPoke.webp';
 import { obtenerSesion, cerrarSesion, esAdmin, EVENTO_SESION } from '../../data/auth';
+import Text from '../atoms/Text';
+import Image from '../atoms/Image';
 
 const links = [
   { ruta: '/', texto: 'Inicio' },
@@ -32,7 +34,7 @@ function Header() {
   <BootstrapNavbar  expand="lg" sticky="top" variant="dark" className="navbar-huellitas"  style={{ backgroundColor: '#DC0A0A' }}>
       <Container>
         <BootstrapNavbar.Brand as={Link} to="/" className="marca">
-          <img src={logoPoke} alt="Logo Veterinaria Huellitas" className="logo" />
+          <Image src={logoPoke} alt="Logo Veterinaria Huellitas" className="logo" />
           Veterinaria Huellitas
         </BootstrapNavbar.Brand>
 
@@ -54,9 +56,9 @@ function Header() {
           <Nav className="align-items-lg-center">
             {sesion ? (
               <>
-                <span className="navbar-text text-white me-3">
+                <Text variant="span" className="navbar-text text-white me-3">
                   Hola, <strong>{sesion.nombre || sesion.email}</strong>
-                </span>
+                </Text>
                 <Nav.Link as="button" type="button" onClick={salir}>
                   Cerrar sesión
                 </Nav.Link>

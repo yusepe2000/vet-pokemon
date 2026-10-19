@@ -1,23 +1,25 @@
 import React from 'react';
 import MuchosPokes from '../../data/image/MuchosPokes.webp'; 
 import '../../styles/organismsStyle/Aboutsection.css';
+import Text from '../atoms/Text';
+import Image from '../atoms/Image';
 
 export const AboutSection = () => {
   return (
     <div className="seccion-index">
       <article id="Nosotros">
         <div className="nosotros-imagen">
-          <img src={MuchosPokes} alt="pokemones" className="imgPoke" />
+          <Image src={MuchosPokes} alt="pokemones" className="imgPoke" />
         </div>
         <div className="nosotros-texto">
-          <h2>
-            <span className="titulo-rojo">Conoce </span>
-            <span className="titulo-celeste">Quiénes Somos</span>
-          </h2>
-          <p>
+          <Text variant='h2'>
+            <Text variant='span' className="titulo-rojo">Conoce </Text>
+            <Text variant='span' className="titulo-celeste">Quiénes Somos</Text>
+          </Text>
+          <Text variant='p'>
             En Huellitas cuidamos a cada Pokémon con amor, dedicación y profesionalismo.
             Nuestro objetivo es mantenerlos sanos, felices y listos para vivir nuevas aventuras junto a sus entrenadores.
-          </p>
+          </Text>
           <a href="#nosotros" className="btn">Ver más</a>
         </div>
       </article>
