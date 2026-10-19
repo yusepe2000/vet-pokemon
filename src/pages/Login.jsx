@@ -72,13 +72,6 @@ export function Login() {
             Entrar
           </Button>
         </form>
-
-        <p className="small text-white text-center mt-3 mb-0">
-          Cliente: <strong>entrenador@duoc.cl</strong> / <strong>poke123</strong>
-        </p>
-        <p className="small text-white text-center mt-1 mb-0">
-          Admin: <strong>admin@duoc.cl</strong> / <strong>admin123</strong>
-        </p>
         <p className="small text-white text-center mt-2 mb-0">
           ¿No tienes cuenta? <Link to="/registro">Regístrate aquí</Link>
         </p>

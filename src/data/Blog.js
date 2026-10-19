@@ -8,6 +8,7 @@ import bulbasaur from './image/bulbasaur.webp';
 import gengar from './image/gengaar.webp';
 import onix from './image/onix.webp';
 import jigglypuff from './image/jigglypuff.webp';
+import squirtleSquad from './image/squirtle_squad.webp';
 
 const posts = [
   {
@@ -99,6 +100,15 @@ const posts = [
     texto: 'Después de participar en un concurso de canto que duró casi tres horas, un Jigglypuff llegó afónico. Le recomendamos reposo vocal y ya está cantando de nuevo...',
     image: jigglypuff,
     alt: 'Jigglypuff con la garganta cansada'
+  },
+  {
+    id: 11,
+    titulo: '¡LA SQUIRTLE SQUAD VUELVE A ATACAR!',
+    fecha: '23 sep 2025',
+    categoria: 'Noticias',
+    texto: 'Un grupo de Squirtle traviesos ha estado causando problemas en la ciudad, lanzando chorros de agua a los transeúntes. El Centro Pokémon está trabajando con las autoridades para encontrar una solución...',
+    image: squirtleSquad,
+    alt: 'Squirtle Squad'
   }
 ];
 

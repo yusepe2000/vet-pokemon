@@ -49,8 +49,6 @@ function Header() {
                 Administración
               </Nav.Link>
             )}
-            <Nav.Link href="/#Servicios">Servicios</Nav.Link>
-            <Nav.Link href="/#contacto">Contacto</Nav.Link>
           </Nav>
 
           <Nav className="align-items-lg-center">
