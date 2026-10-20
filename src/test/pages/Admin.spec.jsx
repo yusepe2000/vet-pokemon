@@ -3,9 +3,10 @@ import Admin from '../../pages/Admin';
 import { obtenerProductos } from '../../data/inventario';
 import productosIniciales from '../../data/Products';
 
-const llenar = (nombre, precio) => {
+const llenar = (nombre, precio, stock = '10') => {
   fireEvent.change(screen.getByLabelText('Nombre'), { target: { value: nombre } });
   fireEvent.change(screen.getByLabelText('Precio'), { target: { value: precio } });
+  fireEvent.change(screen.getByLabelText('Stock'), { target: { value: stock } });
 };
 
 describe('Admin Page', () => {
@@ -27,6 +28,41 @@ describe('Admin Page', () => {
     llenar('Pikaball', '0');
     fireEvent.click(screen.getByText('Agregar producto', { selector: 'button' }));
     expect(screen.getByText('El precio debe ser un número mayor a 0.')).toBeTruthy();
+  });
+
+  it('valida que el stock sea un entero de 0 o más', () => {
+    render(<Admin />);
+    llenar('Pikaball', '500', '-1');
+    fireEvent.click(screen.getByText('Agregar producto', { selector: 'button' }));
+    expect(screen.getByText('El stock debe ser un número entero de 0 o más.')).toBeTruthy();
+
+    llenar('Pikaball', '500', '');
+    fireEvent.click(screen.getByText('Agregar producto', { selector: 'button' }));
+    expect(screen.getByText('El stock debe ser un número entero de 0 o más.')).toBeTruthy();
+
+    llenar('Pikaball', '500', '2.5');
+    fireEvent.click(screen.getByText('Agregar producto', { selector: 'button' }));
+    expect(screen.getByText('El stock debe ser un número entero de 0 o más.')).toBeTruthy();
+    expect(obtenerProductos().length).toBe(productosIniciales.length);
+  });
+
+  it('guarda el stock del producto nuevo', () => {
+    render(<Admin />);
+    llenar('Pikaball', '500', '7');
+    fireEvent.click(screen.getByText('Agregar producto', { selector: 'button' }));
+    const guardados = obtenerProductos();
+    expect(guardados[guardados.length - 1].stock).toBe(7);
+  });
+
+  it('al editar carga el stock y permite cambiarlo', () => {
+    render(<Admin />);
+    fireEvent.click(screen.getAllByText('Editar')[3]); // Masterball (stock 1)
+    expect(screen.getByLabelText('Stock')).toHaveValue(1);
+
+    fireEvent.change(screen.getByLabelText('Stock'), { target: { value: '5' } });
+    fireEvent.click(screen.getByText('Guardar cambios'));
+    expect(obtenerProductos()[3].name).toBe('Masterball');
+    expect(obtenerProductos()[3].stock).toBe(5);
   });
 
   it('agrega un producto nuevo y lo guarda', () => {

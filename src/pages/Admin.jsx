@@ -85,6 +85,7 @@ function Admin() {
         id: nuevoId,
         name: nombre.trim(),
         price: Number(precio),
+        stock: Number(stock),
         category: categoria,
         image: imagen || imagenPorDefecto(),
       };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent, cleanup } from '@testing-library/react';
-import ProductStock from '../../components/organisms/ProductStock.jsx';
+import ProductStock from '../../../components/organisms/ProductStock.jsx';
 
 const producto = {
   id: 3,

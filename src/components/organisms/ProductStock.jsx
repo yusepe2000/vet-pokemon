@@ -19,7 +19,7 @@ function ProductStock({ producto, onCerrar, onAgregar }) {
           ×
         </Button>
 
-        <Imagen src={producto.image} alt={producto.name} className="ventanilla-img" />
+        <Image src={producto.image} alt={producto.name} className="ventanilla-img" />
         <Text variant='h2' className="ventanilla-nombre">{producto.name}</Text>
         <Text className="ventanilla-descripcion">
           {producto.descripcion || 'Sin descripción'}

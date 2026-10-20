@@ -3,7 +3,7 @@ import Text from '../atoms/Text';
 import Button from '../atoms/Button';
 import '../../styles/moleculesStyle/productCard.css';
  
-function ProductCard({ product, onAgregar, onEliminar, onVerDetalle }) {
+function ProductCard({ product, agotado = false, onAgregar, onEliminar, onVerDetalle }) {
   // frena el clic para que el botón no abra también la ventanilla
   const agregar = (e) => {
     e.stopPropagation();

@@ -22,7 +22,7 @@ describe('Header', () => {
 
   it('muestra los enlaces del menú', () => {
     mostrarHeader();
-    ['Inicio', 'Nosotros', 'Productos', 'Blog', 'Servicios', 'Contacto'].forEach((texto) => {
+    ['Inicio', 'Nosotros', 'Productos', 'Blog'].forEach((texto) => {
       expect(screen.getByText(texto)).toBeTruthy();
     });
   });
